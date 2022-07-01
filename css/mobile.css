@@ -28,7 +28,7 @@
     padding-bottom: 50px;
   }
 
-  .first-heading {
+  .landing-caption .first-heading {
     font-size: 3rem;
   }
 
@@ -57,7 +57,7 @@
     font-size: 3rem;
   }
 
-  .first-heading {
+  .landing-caption .first-heading {
     font-size: 3rem;
   }
   
@@ -120,7 +120,7 @@
     font-size: 2.75rem;
   }
 
-  .first-heading {
+  .landing-caption .first-heading {
     font-size: 2.75rem;
   }
   
@@ -166,7 +166,7 @@
     font-size: 2.25rem;
   }
 
-  .first-heading {
+  .landing-caption .first-heading {
     font-size: 2.5rem;
   }
   
@@ -234,7 +234,7 @@
     font-size: 1.85rem;
   }
 
-  .first-heading {
+  .landing-caption .first-heading {
     font-size: 1.9rem;
   }
   
