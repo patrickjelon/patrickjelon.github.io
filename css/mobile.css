@@ -28,6 +28,10 @@
     padding-bottom: 50px;
   }
 
+  .first-heading {
+    font-size: 3rem;
+  }
+
   .product-img {
     display: flex;
     padding: 50px;
@@ -50,6 +54,10 @@
   }
   
   .landing-caption h1 {
+    font-size: 3rem;
+  }
+
+  .first-heading {
     font-size: 3rem;
   }
   
@@ -111,6 +119,10 @@
   .landing-caption h1 {
     font-size: 2.75rem;
   }
+
+  .first-heading {
+    font-size: 2.75rem;
+  }
   
   .landing-caption h3 {
     font-size: 16px;
@@ -152,6 +164,10 @@
   
   .landing-caption h1 {
     font-size: 2.25rem;
+  }
+
+  .first-heading {
+    font-size: 2.5rem;
   }
   
   .landing-caption h3 {
@@ -216,6 +232,10 @@
 @media (max-width: 381.98px) {
   .landing-caption h1 {
     font-size: 1.85rem;
+  }
+
+  .first-heading {
+    font-size: 1.9rem;
   }
   
   .landing-caption h3 {
