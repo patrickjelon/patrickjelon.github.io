@@ -1936,3 +1936,7 @@ height: auto;
   font-size: 32px;
   color: var(--dark-color);
 }
+
+.before-after .container {
+  max-width: 1100px;
+}
