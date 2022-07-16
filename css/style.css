@@ -23,6 +23,10 @@ body {
   line-height: 1.5;
 }
 
+section {
+  background: #fff;
+}
+
 /*============= SCROLLBAR =============*/
 ::-webkit-scrollbar {
   width: 12px;
@@ -1333,6 +1337,7 @@ footer {
   font-size: 21px;
   line-height: 29px;
   letter-spacing: .04em;
+  font-family: sans-serif;
 }
 .custom-shape-divider-top-1657840841 {
   position: absolute;
@@ -1944,4 +1949,23 @@ height: auto;
 
 .before-after .container {
   max-width: 1100px;
+}
+
+.fourohfour {
+  overflow: hidden;
+}
+
+.fourohfour .container {
+  height: 100vh;
+}
+
+.fourohfour .container img {
+  max-width: 40%;
+  height: auto;
+  padding-bottom: 2rem;
+}
+
+.fourohfour .container .grid-12 {
+  flex-flow: column;
+  height: 100%;
 }

@@ -92,133 +92,93 @@
 }
 /*============= END PRELOADER =============*/
 
+.btn-container {
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
 .btn-theme {
-  display: inline-block;
-  position: relative;
-  cursor: pointer;
-  overflow: hidden;
-  border: 0.2rem solid;
   color: var(--primary-color);
-  opacity: 1;
+	 cursor: pointer;
+	 font-size: 18px;
+	 font-weight: 600;
+	 line-height: 45px;
+	 margin: 0 0 2em;
+	 /* max-width: 160px; */
+   padding: 0 30px;
+   border: 3px solid;
+   display: block;
+	 overflow: hidden;
+	 position: relative;
+	 text-decoration: none;
+	 text-transform: uppercase;
+	 /* width: 100%; */
 }
 
-footer .btn-theme {
-  color: var(--secondary-color);
+.btn-theme span {
+  z-index: 50;
 }
 
-.p-relative {
-  position: relative;
-}
-
-.btn-text {
-  display: block;
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 18px;
-  padding: 0.5rem 2rem;
-}
-
-
-.btn-text a {
-  color: var(--primary-color)
-}
-
-footer .btn-text a {
-  color: var(--secondary-color);
-}
-
-.btn-text-link {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  opacity: 0;
-  transform: translateX(-1rem);
-}
-
-.btn-mask {
-  display: block;
-  position: absolute;
+.btn-theme::after {
   background: var(--primary-color);
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  transform: translateX(-100%) rotate(45deg);
+	 content: "";
+	 height: 155px;
+	 left: -75px;
+	 opacity: 0.3;
+	 position: absolute;
+	 top: -50px;
+	 transform: rotate(35deg);
+	 transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+	 width: 50px;
+	 z-index: 0;
 }
 
-.btn-booking {
-  all: unset;
-  cursor: pointer;
-}
-
-footer .btn-mask {
-  background: var(--secondary-color);
-}
-
-.btn-theme:hover {
-  opacity: 1;
-}
-
-.btn-theme:hover .btn-text {
-  animation: fx-text 0.6s ease-out;
-}
-
-.btn-theme:hover .btn-text-link {
-  animation: fx-text-link 0.6s ease-out;
-}
-
-.btn-theme:hover .btn-mask {
-  animation: fx-mask 0.6s ease-out;
+.btn-theme:hover:after {
+  left: 120%;
+	 transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 .btn-theme:active {
   background: var(--primary-color);
   color: var(--light-color);
   border-color: var(--primary-color);
-  opacity: 1;
+}
+
+footer .btn-theme {
+  color: var(--secondary-color);
+}
+
+footer .btn-theme::after {
+  background: var(--secondary-color);
 }
 
 footer .btn-theme:active {
   background: var(--secondary-color);
-  color: var(--dark-color);
   border-color: var(--secondary-color);
+  color: var(--dark-color);
 }
 
-@keyframes fx-mask {
-  0% {
-    transform: translateX(-100%) rotate(45deg);
- }
-
-  100% {
-    transform: translateX(100%) rotate(45deg);
- }
+.p-relative {
+  position: relative;
 }
 
-@keyframes fx-text {
-  0% {
-    transform: translateX(0);
-    opacity: 1;
- }
 
-  100% {
-    transform: translateX(1em);
-    opacity: 0;
- }
+.btn-booking {
+  background: none;
+  cursor: pointer;
 }
 
-@keyframes fx-text-link {
-  0% {
-    transform: translateX(-1em);
-    opacity: 0;
- }
+.btn-booking span {
+  font-family: var(--font-catamaran-reg);
+  font-weight: 600;
+}
 
-  100% {
-    transform: translateX(0);
-    opacity: 1;
- }
+.btn-unset {
+  all: unset;
+  cursor: pointer;
 }
 
 /*============= START BLOCK REVEAL ANIMATIONS =============*/ 
