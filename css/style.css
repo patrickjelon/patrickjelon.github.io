@@ -1923,6 +1923,11 @@ height: auto;
   padding-right: 0;
 }
 
+.image-wrapper {
+  padding-left: 0;
+  padding-right: 0;
+}
+
 .before-after-item img {
   max-width: 100%;
   height: auto;

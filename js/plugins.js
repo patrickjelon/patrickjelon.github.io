@@ -114,3 +114,38 @@ window.onscroll = function() {
   }
   prevScrollpos = currentScrollPos;
 }
+
+
+/*========== Square Booking Modal ==========*/
+const triggers = document.querySelectorAll("[data-modaltrigger]");
+const dialogs = document.querySelectorAll("dialog");
+
+triggers.forEach(function (el) {
+  el.addEventListener("click", () => {
+    const getTarget = el.getAttribute("data-target");
+    const target = document.querySelector(`[data-name="${getTarget}"]`);
+    if (target.hasAttribute("open")) {
+      target.close();
+      // Return to scrolling if user closes modal with button
+      // window.onscroll = function(){}; 
+    } else {
+      target.showModal();
+      // Bar user from scrolling while modal is open
+      // scrollTop = window.pageYOffset || document.documentElement.scrollTop; 
+      // scrollLeft = window.pageXOffset || document.documentElement.scrollLeft, 
+      // window.onscroll = function() { 
+      //   window.scrollTo(scrollLeft, scrollTop); 
+      // }; 
+    };
+  });
+});
+
+/* Check for click in backdrop */
+dialogs.forEach(function (el) {
+  el.addEventListener("click", ({target:dialog}) => {
+    if (dialog.nodeName === 'DIALOG') {
+      dialog.close('dismiss')
+      // window.onscroll = function(){}; 
+    }
+  });
+});

@@ -212,6 +212,10 @@
     font-size: 3.2rem;
   }
 
+  dialog {
+    max-width: 85vw;
+  }
+
   }
 
 
@@ -267,6 +271,14 @@
 .external-landing-service .external-landing-text h2 {
   font-size: 2rem;
 }
+
+dialog {
+  max-width: 90vw;
+}
+
+.square-booking-iframe {
+  height: 85vh;
+}
 }
 
 @media (max-width: 381.98px) {
@@ -285,6 +297,8 @@
   #navbar-offcanvas.js-navbar-toggled {
     width: 100%;
   }
+
+  
 }
 
 /*============ FRAMEWORK BREAK POINTS: =============*/

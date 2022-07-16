@@ -118,6 +118,7 @@ footer .btn-theme {
   padding: 0.5rem 2rem;
 }
 
+
 .btn-text a {
   color: var(--primary-color)
 }
@@ -146,6 +147,11 @@ footer .btn-text a {
   right: 0;
   bottom: 0;
   transform: translateX(-100%) rotate(45deg);
+}
+
+.btn-booking {
+  all: unset;
+  cursor: pointer;
 }
 
 footer .btn-mask {
@@ -1059,3 +1065,71 @@ dl, ol, ul {
   margin-bottom: 1rem;
 }
 /*============= End General Utilities =============*/
+
+/* Styling the modal and backdrop */
+
+dialog {
+  width: 100%;
+  max-width: 50%;
+  padding: 0;
+  background: #fff;
+  overflow: hidden;
+  border-radius: 8px;
+  border: 1px solid #dedede;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  margin: auto;
+  animation: scale-in 0.4s ease-out;
+}
+
+dialog::backdrop {
+  background: radial-gradient(circle,rgba(0, 0, 0, 0.5) 0%,rgba(0, 0, 0, 0.7) 100%);
+  cursor: pointer;
+}
+
+/* Styling inside of the modal */
+
+dialog header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background: #fff;
+}
+
+dialog header button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 16px;
+  padding-bottom: 0;
+  margin-bottom: -10px;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+dialog header button svg {
+  width: 35px;
+  height: 35px;
+  fill: #607d8b;
+}
+
+.square-booking-iframe {
+  width: 100%;
+  min-height: 80vh;
+}
+
+@keyframes scale-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-60%);
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+     transform: translateY(0);
+  }
+}
