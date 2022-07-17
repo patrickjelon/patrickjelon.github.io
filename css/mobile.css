@@ -32,6 +32,10 @@
 .border-none-xl {
   border: none !important;
 }
+
+#services .card{
+  height: 485px;
+}
 }
 
 /* Devices under 992px (md) */
@@ -243,6 +247,10 @@
   transform: translateX(-50%);
 }
 
+#services .card {
+  height: 460px;
+}
+
 .contact .container {
   padding-left: 0;
   padding-right: 0;
@@ -296,6 +304,11 @@ dialog {
 
   #navbar-offcanvas.js-navbar-toggled {
     width: 100%;
+  }
+
+  .container {
+    padding-left: 5px;
+    padding-right: 5px;
   }
 
   

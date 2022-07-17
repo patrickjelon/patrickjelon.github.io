@@ -1054,7 +1054,7 @@ ul.list-2 li {
 #filler {
   padding-top: 8.5rem;
   padding-bottom: 8rem;
-  background: url(../img/landing/anastase-maragos-Lrfuy93_hAc-unsplash.jpg) no-repeat center center/cover;
+  background: url(../img/landing/anastase-maragos-Lrfuy93_hAc-unsplash.webp) no-repeat center center/cover;
   background-attachment: fixed;
 }
 
@@ -1968,4 +1968,12 @@ height: auto;
 .fourohfour .container .grid-12 {
   flex-flow: column;
   height: 100%;
+}
+
+.fourohfour small {
+  font-size: 24px;
+}
+
+.client-results-testimonials .custom-shape-divider-top-1657840636 {
+  bottom: -47px;
 }
