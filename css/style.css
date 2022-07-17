@@ -1938,6 +1938,11 @@ height: auto;
   color: var(--dark-color);
 }
 
+.font-alt {
+  font-family: Tahoma, sans-serif;
+  font-size: 20px;
+}
+
 .before-after .container {
   max-width: 1100px;
 }
