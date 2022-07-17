@@ -2,7 +2,10 @@
 
 /* Devices over 1200px (xl) */
 @media (min-width: 1200px) {
-
+  .text-content.text-content-pb {
+    padding-bottom: 40px;
+    width: 60%;
+  }
 }
 
 @media (max-width: 1334.98px) {
@@ -220,6 +223,10 @@
     max-width: 85vw;
   }
 
+  .text-content.text-content-pb {
+    padding: 34px 25px 30px 25px;
+  }
+
   }
 
 
@@ -259,6 +266,10 @@
 .navbar-toggle.scrolled {
   right: 5px;
   top: 20px;
+}
+
+.text-content.text-content-pb {
+  padding: 34px 20px 25px 20px;
 }
 
 #delivery .info-wrapper {

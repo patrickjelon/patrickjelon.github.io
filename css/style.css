@@ -605,7 +605,7 @@ section {
 .text-content {
   margin-bottom: 0;
     position: relative;
-    padding: 34px 140px 70px 40px;
+    padding: 34px 40px 70px 40px;
     width: 51.8%;
     margin-top: 150px;
     min-height: 400px;
@@ -622,8 +622,8 @@ section {
 }
 
 .text-content p {
-  font-size: 1.125rem;
-  line-height: 1.875rem;
+  font-size: 1.05rem;
+    line-height: 1.575rem;
   letter-spacing: 0;
   text-transform: none;
   padding: 0;
@@ -1904,15 +1904,6 @@ height: auto;
 
 .form-submit label a {
   color: var(--primary-color);
-}
-
-.form-submit .btn-theme {
-  color: var(--light-color);
-}
-
-.form-submit .btn-theme:hover {
-  color: var(--dark-color);
-  background: var(--light-color);
 }
 
 /* Map */
