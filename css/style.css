@@ -1445,12 +1445,12 @@ footer {
 }
 
 #services .container {
-  max-width: 1405px;
+  max-width: 1500px;
 }
 
 #services .card {
   position: relative;
-  height: 435px;
+  height: 500px;
   border-radius: 5px;
   box-shadow: 0 0 40px rgba(0, 47, 77, 0.12);
   margin-bottom: 30px;
