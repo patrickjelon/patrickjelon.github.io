@@ -270,6 +270,10 @@
     padding-left: 10px;
     padding-right: 10px;
 }
+
+#navbar-offcanvas {
+  width: 100%;
+}
 }
 
 /*============ FRAMEWORK BREAK POINTS: =============*/
