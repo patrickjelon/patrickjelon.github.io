@@ -271,7 +271,7 @@
     padding-right: 10px;
 }
 
-#navbar-offcanvas {
+#navbar-offcanvas.js-navbar-toggled {
   width: 100%;
 }
 }
