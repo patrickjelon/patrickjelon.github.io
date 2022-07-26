@@ -94,6 +94,11 @@ body {
   padding-bottom: 3.5px;
 }
 
+.navbar-item.navbar-item-btn .navbar-link {
+  padding-left: 17px;
+  padding-right: 17px;
+}
+
 .navbar-item .navbar-link:hover,
 .navbar-item .navbar-link:active,
 .navbar-item .navbar-ink:focus {
@@ -103,7 +108,7 @@ body {
 
 .navbar-item.navbar-item-btn {
   background-color: var(--primary-color);
-  padding: 9px 17px;
+  padding: 9px 0px;
   border-radius: 4px;
   margin-left: 13px;
 }
@@ -656,12 +661,12 @@ section#buynow {
   background-color: #111;
   color: var(--light-color);
   padding-top: 6rem;
-  padding-bottom: 4rem;
+  padding-bottom: 1.5rem;
 }
 
 #contact .grid-10 h1 {
-  font-size: 4.2rem;
-  line-height: 5.2rem;
+  font-size: 2.5rem;
+  line-height: 3.5rem;
   font-family: var(--font-montserrat-light);
   font-weight: 300;
   margin-bottom: 3rem;
