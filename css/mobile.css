@@ -2,277 +2,84 @@
 
 /* Devices over 1200px (xl) */
 @media (min-width: 1200px) {
-
+	/* Framework Start */
+	/* Framework End */
 }
 
 /* Devices under 1200px (lg) */
 @media (max-width: 1199.98px) {
-  .landing-caption {
+	/* Framework Start */
+	.container {
+		max-width: 960px;
+	}
+
+  #intro {
+    margin-top: 6.5rem;
+  }
+
+  .intro-polaroid-inner {
     width: 80%;
   }
-  
-  .landing-caption h1 {
-    font-size: 3.25rem;
-  }
-  
-  .landing-caption h3 {
-    font-size: 20px;
-  }
-
-  .product-summary h1 {
-    font-size: 48px;
-  }
-
-  .product-summary {
-    padding: 0;
-    padding-bottom: 50px;
-  }
-
-  .landing-caption .first-heading {
-    font-size: 6.5rem;
-}
-
-  .product-img {
-    display: flex;
-    padding: 50px;
-  }
-
-  .product-img img {
-    max-width: 50%;
-    margin: 0 auto;
-  }
-
-  .about-img img {
-    padding-top: 50px;
-  }
+	/* Framework End */
 }
 
 /* Devices under 992px (md) */
 @media (max-width: 991.98px) {
-  .landing-caption {
-    width: 85%;
-  }
-  
-  .landing-caption h1 {
-    font-size: 3rem;
+  .intro-polaroid-inner {
+    margin: 0;
   }
 
-  .landing-caption .first-heading {
-    font-size: 6rem;
-  }
-  
-  .landing-caption h3 {
-    font-size: 18px;
+  .learn-card {
+    margin-bottom: 3rem;
   }
 
-  .about-text {
-    margin-bottom: 20px;
+  #lessons-info .container {
+    grid-template-columns: repeat(2, 1fr);
   }
-
-  .pricing-img img {
-    max-width: 65%;
-  }
-
-  .pricing-text h1 {
-    font-size: 1.85rem;
-  }
-
-  #contact .grid-10 h1 {
-    font-size: 2.2rem;
-    line-height: 3.2rem;
-  }
-
-  .contact-column p {
-    font-size: 21px;
-  }
-
-  .contact-column a {
-    font-size: 13px;
-  }
-
-  .filler-img {
-    margin-bottom: 30px;
-  }
-
-  .sub-img {
-    margin-left: 0;
-    padding-top: 55px;
-  }
-
-  /* Start Navigation */
-  .navbar .navbar-ul {
-    display: none;
-  }
-  
-  .navbar-toggle {
-    display: block;
-  }
-  
-  #navbar-offcanvas {
-    display: block;
-  }
-  /* End Navigation */
 }
 
 /* Devices under 768px (sm) */
 @media (max-width: 767.98px) {
-  .landing-caption h1 {
-    font-size: 2.75rem;
+	/* Framework Start */
+	.first-heading {
+    font-size: 3rem;
   }
-
-  .landing-caption .first-heading {
-    font-size: 4.8rem;
-  }
-  
-  .landing-caption h3 {
-    font-size: 16px;
-  }
-
-  .custom-shape-divider-bottom-1655578944 {
-    width: 190%;
-  }
-
-  .pricing-img img {
-    max-width: 100%;
-    margin-bottom: 20px;
-  }
-
-  #contact .grid-10 h1 {
-    font-size: 1.2rem;
-    line-height: 2.2rem;
-  }
-
-  .contact-column {
-    text-align: center;
-    margin-bottom: 15px;
-  }
-
-  .about-info p {
-    max-width: 100%;
-    padding-bottom: 35px;
-}
-
-.product-img img {
-  max-width: 75%;
-}
 }
 
 /* Devices under 576px (xs) */
 @media (max-width: 576.98px) {
-  .landing-caption {
-    width: 90%;
-  }
-  
-  .landing-caption h1 {
-    font-size: 2.25rem;
+	.navbar-right {
+    display: none;
+    visibility: hidden;
   }
 
-  .about-final-img.container {
-    padding-left: 15px;
-    padding-right: 15px;
+  .navbar {
+    padding-left: 0;
+    padding-right: 0;
   }
 
-  .landing-caption .first-heading {
-    font-size: 4rem;
+  .first-heading {
+    font-size: 2.8rem;
+}
+
+.landing-btn {
+  padding: 0.75rem 1.25rem;
+}
+
+  .navbar .container-fluid {
+    padding-left: 0;
+    padding-right: 0;
   }
-  
-  .landing-caption h3 {
-    font-size: 16px;
-  }
-
-  #about .container {
-    padding: 0 20px;
-  }
-
-  .margin-b-7 {
-    margin-bottom: 12px;
-  }
-
-  .custom-shape-divider-top-1655757918 {
-    width: 175%;
-}
-
-#contact .grid-10 h1 {
-  font-size: 0.75rem;
-  line-height: 1.2rem;
-}
-
-.external-landing .grid-12 h1 {
-  font-size: 4rem;
-}
-
-.about-filler .container {
-  padding: 0 20px;
-}
-
-.about-info p {
-  font-size: 13px;
-}
-
-.product-img img {
-  max-width: 100%;
-}
-
-.product-book .container {
-  padding: 0 20px;
-}
-
-.button-container .buy-btn {
-  display: block;
-  margin-bottom: 10px;
-}
-
-.button-container .buy-btn:first-child {
-  margin-right: 0;
-}
-
-.product-summary h1 {
-  font-size: 36px;
-}
-
-.sub-heading h1 {
-  font-size: 27px;
-}
 }
 
 @media (max-width: 381.98px) {
-  .landing-caption h1 {
-    font-size: 1.85rem;
-  }
-
-  .landing-caption .first-heading {
-    font-size: 3.35rem;
-  }
-  
-  .landing-caption h3 {
-    font-size: 14px;
-  }
-
-  #contact .grid-10 h1 {
-    font-size: 1rem;
-    line-height: 1.9rem;
-  }
-
-  footer p,
-  footer small {
-    font-size: 14px;
-  }
-
-  .external-landing .grid-12 h1 {
-    font-size: 3rem;
-  }
-
-  .about-filler .container {
-    padding: 0 10px;
-  }
-
-  .product-img {
-    padding-left: 10px;
-    padding-right: 10px;
+  .first-heading {
+    font-size: 2rem;
 }
 
-#navbar-offcanvas.js-navbar-toggled {
-  width: 100%;
+.navbar-brand {
+  margin-left: 0;
+  font-size: 1.1rem;
 }
 }
 
