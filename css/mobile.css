@@ -13,12 +13,20 @@
 		max-width: 960px;
 	}
 
+  #actual-lessons .container {
+    max-width: 1205px;
+  }
+
   #intro {
     margin-top: 6.5rem;
   }
 
   .intro-polaroid-inner {
     width: 80%;
+  }
+  
+  .landing-caption hr {
+    width: 50%;
   }
 	/* Framework End */
 }
@@ -29,6 +37,10 @@
     margin: 0;
   }
 
+  .lessons-card-container {
+    margin-bottom: 2rem;
+  }
+
   .learn-card {
     margin-bottom: 3rem;
   }
@@ -36,6 +48,42 @@
   #lessons-info .container {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .about-paragraph {
+    margin-bottom: 2.5rem;
+  }
+
+  #about {
+    padding: 75px 0;
+}
+
+.value p {
+  font-size: 14px;
+}
+
+.value h1 {
+  text-transform: uppercase;
+  font-size: 1.75rem;
+}
+
+.value-inner {
+  padding: 0;
+}
+
+.external-gallery-wrap {
+  column-count: 3;
+}
+
+.img-wrapper {
+  position: static;
+  width: 100%;
+}
+
+.text-content {
+  margin-top: 0;
+  width: 100%;
+  min-height: 0;
+}
 }
 
 /* Devices under 768px (sm) */
@@ -44,6 +92,39 @@
 	.first-heading {
     font-size: 3rem;
   }
+
+  .text-content {
+    padding: 34px 40px 70px 40px;
+  }
+
+  .gallery.container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .theme-heading h1 {
+    font-size: 35px;
+  }
+
+  footer .footer-col {
+    margin-bottom: 2.2rem;
+  }
+
+  .external-landing-title {
+    min-width: calc(80% + 50px);
+    transform: translateX(-50%);
+    left: 50%;
+  }
+
+  .external-landing-title h1 {
+    font-size: 1.8rem;
+}
+
+.value {
+  margin-bottom: 1.85rem;
+}
+
+
 }
 
 /* Devices under 576px (xs) */
@@ -51,6 +132,32 @@
 	.navbar-right {
     display: none;
     visibility: hidden;
+  }
+
+  .external-gallery-wrap {
+    column-count: 2;
+  }
+
+  .form-input-6 {
+    width: 100%;
+  }
+
+  .form-input-6.left,
+  .form-input-6.right {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .text-content {
+    padding: 34px 20px 25px 20px;
+  }
+
+  .text-content h2 {
+    font-size: 1.75rem;
+  }
+
+  .text-content p {
+    font-size: 0.98rem;
   }
 
   .navbar {
@@ -62,6 +169,91 @@
     font-size: 2.8rem;
 }
 
+footer .container {
+  text-align: center;
+}
+
+.footer-col ul {
+  width: 75%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer-col ul li {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer-col ul li a {
+  padding-right: 25px;
+  padding-left: 25px;
+}
+
+.footer-col ul li.item-active,
+.footer-col ul li:hover {
+  width: 65%;
+}
+
+.footer-logo-container {
+  text-align: center;
+}
+
+.footer-logo {
+  width: 25%;
+}
+
+.contact-info {
+  order: 0;
+}
+
+.sitemap {
+  order: 1;
+}
+
+.social-media {
+  order: 2;
+}
+
+.newsletter {
+  order: 3;
+}
+
+.theme-heading h1::before, .theme-heading h1::after {
+  width: 85px;
+}
+
+.custom-shape-divider-top-1659299895 {
+  left: -139px;
+  width: 189%;
+}
+
+.cta-heading h1 {
+  font-size: 40px;
+}
+
+.cta-text p {
+  font-size: 18px;
+}
+
+.theme-heading h1 {
+  font-size: 25px;
+}
+
+.learn-card-body {
+  width: 100%;
+  padding: 0.8rem 0;
+}
+
+.card-body {
+  font-size: 1.2rem;
+}
+
+.learn-card-body .card-header {
+  font-size: 1rem;
+  padding-top: 1rem;
+}
+
 .landing-btn {
   padding: 0.75rem 1.25rem;
 }
@@ -70,6 +262,24 @@
     padding-left: 0;
     padding-right: 0;
   }
+
+  .intro-text .logo img {
+    width: 55%;
+    height: auto;
+  }
+  
+  .intro-polaroid-inner {
+    width: 100%;
+  }
+
+  #lessons-info .container {
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.menu-wrap .menu-image {
+  display: none;
+  visibility: hidden;
+}
 }
 
 @media (max-width: 381.98px) {
@@ -77,9 +287,66 @@
     font-size: 2rem;
 }
 
+.menu-wrap .menu-navigation {
+  padding-left: 30px;
+}
+
+.external-gallery-wrap {
+  column-count: 1;
+}
+
+.footer-col ul {
+  width: 100%;
+}
+
+.contact-inner {
+  width: 100%;
+}
+
+.text-content h2 {
+  font-size: 1.55rem;
+}
+
+.text-content p {
+  font-size: 0.94rem;
+}
+
+.external-landing-title h1 {
+  font-size: 1.3rem;
+}
+
+.footer-col ul li.item-active, .footer-col ul li:hover {
+  width: 75%;
+}
+
+#ending-img {
+  padding-top: 50px;
+}
+
+.footer-col ul li {
+  max-width: 65%;
+}
+
+.theme-heading h1 {
+  font-size: 21px;
+}
+
+#call-to-action .container {
+  padding-left: 0;
+  padding-right: 0;
+}
+
 .navbar-brand {
   margin-left: 0;
   font-size: 1.1rem;
+}
+
+.card-body {
+  font-size: 1rem;
+}
+
+.learn-card-body .card-header {
+  font-size: 0.8rem;
 }
 }
 

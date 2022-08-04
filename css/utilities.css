@@ -469,6 +469,7 @@ footer .btn-theme:active {
   background-size: cover;
   background-position: 50% 50%;
   height: 60vh;
+  min-height: 445px;
 }
 
 #external-landing .container {

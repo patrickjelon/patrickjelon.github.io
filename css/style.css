@@ -309,7 +309,7 @@ body {
   animation-name: animateImageFadeInOut;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
-  animation-duration: 16s;
+  animation-duration: 12s;
 }
 
 .menu-wrap .menu-image img:nth-of-type(1) {
@@ -317,19 +317,19 @@ body {
 }
 
 .menu-wrap .menu-image img:nth-of-type(2) {
-  animation-delay: 4s;
+  animation-delay: 3s;
 }
 
 .menu-wrap .menu-image img:nth-of-type(3) {
-  animation-delay: 8s;
+  animation-delay: 6s;
 }
 
 .menu-wrap .menu-image img:nth-of-type(4) {
-  animation-delay: 12s;
+  animation-delay: 9s;
 }
 
 .menu-wrap .menu-image img:nth-of-type(5) {
-  animation-delay: 16s;
+  animation-delay: 12s;
 }
 
 @keyframes animateImageFadeInOut {
@@ -402,7 +402,7 @@ body {
   background: var(--light-color);
   margin: 0.8rem auto 1.2rem;
   height: 2px;
-  width: 60%;
+  width: 30%;
 }
 
 .landing-caption h4 {
@@ -481,6 +481,11 @@ body {
 }
 
 /* ============= INTRODUCTION SECTION ============= */
+
+#intro {
+  margin-top: 3.5rem;
+  position: relative;
+}
 
 .intro-img {
   margin: 100px 0;
@@ -691,8 +696,18 @@ body {
   height: 350px;
 }
 
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.4;
+}
+
 .lessons-info-card::before {
-  background-image: url(../img/gallery/gallery-4.jpg);
+  background-image: url(../img/gallery/gallery-4.webp);
   content: "";
   position: absolute;
   top: 0;
@@ -706,19 +721,24 @@ body {
 }
 
 .lessons-info-card.card-2::before {
-  background-image: url(../img/gallery/gallery-1.jpg)
+  background-image: url(../img/gallery/gallery-1.webp)
 }
 
 .lessons-info-card.card-3::before {
-  background-image: url(../img/aesthetic-fruits.png);
+  background-image: url(../img/aesthetic-fruits.webp);
+}
+
+.our-values-home {
+  margin-top: 6.5rem;
+  margin-bottom: 6.85rem;
 }
 
 .lessons-info-card.card-4::before {
-  background-image: url(../img/navbar/navbar-3.jpg);
+  background-image: url(../img/navbar/navbar-3.webp);
 }
 
 .footer-logo-container {
-  text-align: center;
+  text-align: left;
 }
 
 .footer-logo {
@@ -744,6 +764,13 @@ body {
   line-height: 1.2;
 }
 
+.offset:before {
+  content: "";
+  height: 7.15rem;
+  display: block;
+  margin-top: -7.15rem;
+}
+
 .card-content p {
   opacity: 0;
   transform: translateY(1rem);
@@ -766,7 +793,7 @@ body {
   letter-spacing: 0.025rem;
   text-transform: uppercase;
   color: white;
-  background-color: black;
+  background-color: var(--primary-color);
   border: none;
 }
 
@@ -904,6 +931,10 @@ footer .footer-col {
 .footer-col ul li a {
   color: var(--light-color);
   font-weight: 300;
+  padding-top: 14px;
+    padding-right: 55px;
+    padding-bottom: 11px;
+    white-space: nowrap;
 }
 
 .footer-col ul li:hover {
@@ -938,11 +969,13 @@ p.terms a {
 }
 
 p.attribution a {
-  color: #969595;
+  color: var(--secondary-color);
+  transition: 0.3s text-decoration ease;
 }
 
 p.attribution a:hover {
-  color: var(--secondary-color);
+  text-decoration: underline;
+  transition: 0.3s text-decoration ease;
 }
 
 
