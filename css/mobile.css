@@ -134,6 +134,14 @@
     visibility: hidden;
   }
 
+  .menu-wrap {
+    transition: transform 0.35s ease-out;
+  }
+
+  .navbar-brand {
+    margin-right: 18px;
+  }
+
   .external-gallery-wrap {
     column-count: 2;
   }
