@@ -18,6 +18,68 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
+/*========== Splide Carousel ==========*/
+document.addEventListener( 'DOMContentLoaded', function () {
+  new Splide('#testimonial-slider', {
+    height: '18rem',
+    width: '50%',
+    breakpoints: {
+      996: {
+        height: '20rem',
+        width: '70%'
+      },
+      780: {
+        height: '25rem',
+        width: '85%'
+      },
+      550: {
+        height: '30rem',
+        width: '95%'
+      },
+      425: {
+        height: '35rem',
+        width: '95%'
+      },
+      310: {
+        height: '38rem',
+        width: '95%'
+      }
+    },
+    type: 'loop',
+    arrowPath: 'M36.4717 20L23.9267 30.3917L25 31.6667L40 19.1317L25 6.66667L23.925 7.94L36.4733 18.3333H0V20H36.4717Z',
+    autoplay: 'true',
+    interval: 4500,
+    speed : 1000,
+    easing : 'cubic-bezier(.4,0,0,1)'
+  }).mount();
+  });
+
+/*========== TESTIMONIALS CAROUSEL NUMBER ==========*/
+
+const slide01 = document.querySelector('.slide-01');
+const slide02 = document.querySelector('.slide-02');
+const slide03 = document.querySelector('.slide-03');
+
+const page = document.querySelector('.splide__pagination__number')
+
+document.addEventListener( 'DOMContentLoaded', function() {
+  setInterval(function() { 
+    if(slide01.classList.contains('is-visible')) {
+      page.classList.add('slide-01-active');
+      page.classList.remove('slide-02-active');
+      page.classList.remove('slide-03-active');
+    } else if(slide02.classList.contains('is-visible')) {
+      page.classList.add('slide-02-active');
+      page.classList.remove('slide-01-active');
+      page.classList.remove('slide-03-active');
+    } else if(slide03.classList.contains('is-visible')) {
+      page.classList.add('slide-03-active');
+      page.classList.remove('slide-01-active');
+      page.classList.remove('slide-02-active');
+    }
+  }, 300);
+});
+
 /*========== MOBILE MENU ==========*/
 /* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
 function menuToggle() {
@@ -38,44 +100,53 @@ document.addEventListener('DOMContentLoaded', function() {
   };
 });
 
-/*========== Splide Carousel ==========*/
-document.addEventListener( 'DOMContentLoaded', function () {
-  new Splide('.testimonial-carousel', {
-    arrowPath: 'M9.17434 2.27793C9.07097 2.47405 9.10909 2.71483 9.26799 2.86943L26.5067 19.6416C26.7084 19.8379 26.7084 20.1621 26.5067 20.3584L9.26799 37.1306C9.10909 37.2852 9.07097 37.5259 9.17434 37.7221L10.0638 39.4095C10.2193 39.7046 10.6147 39.7676 10.8542 39.5354L30.6298 20.3589C30.8324 20.1625 30.8324 19.8375 30.6298 19.641L10.8542 0.464649C10.6147 0.232435 10.2193 0.295371 10.0638 0.590461L9.17434 2.27793Z',
-    direction:'ltr',
-    type: 'loop',
-    easing: 'cubic-bezier(.32,.56,.68,.86)',
-    height: '16rem',
-    width: '65%',
-    autoplay: true,
-    pauseOnHover: true,
-    breakpoints: {
-      99999: {
-        height: '16rem'
-      },
-      850: {
-        height: '21rem'
-      },
-      690: {
-        height: '25rem'
-      },
-      500: {
-        height: '32rem'
-      },
-      400: {
-        height: '40rem'
-      },
-      350: {
-        height: '45rem'
-      },
-      318: {
-        height: '52rem'
-      },
-      282: {
-        height: '60rem'
-      }
-    },
-    interval: 4000,
-    speed: 400
-  }).mount();
-} );
+/*========== Navbar Up On Scroll ==========*/
+// Hide Nav on on scroll down
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.querySelector('nav').classList.remove('nav-up');
+    document.querySelector('.navbar-toggle').classList.remove('nav-up');
+  } else {
+    document.querySelector('nav').classList.add('nav-up');
+    document.querySelector('.navbar-toggle').classList.add('nav-up');
+  }
+  prevScrollpos = currentScrollPos;
+}
+
+
+/*========== Square Booking Modal ==========*/
+const triggers = document.querySelectorAll("[data-modaltrigger]");
+const dialogs = document.querySelectorAll("dialog");
+
+triggers.forEach(function (el) {
+  el.addEventListener("click", () => {
+    const getTarget = el.getAttribute("data-target");
+    const target = document.querySelector(`[data-name="${getTarget}"]`);
+    if (target.hasAttribute("open")) {
+      target.close();
+      // Return to scrolling if user closes modal with button
+      // window.onscroll = function(){}; 
+    } else {
+      target.showModal();
+      // Bar user from scrolling while modal is open
+      // scrollTop = window.pageYOffset || document.documentElement.scrollTop; 
+      // scrollLeft = window.pageXOffset || document.documentElement.scrollLeft, 
+      // window.onscroll = function() { 
+      //   window.scrollTo(scrollLeft, scrollTop); 
+      // }; 
+    };
+  });
+});
+
+/* Check for click in backdrop */
+dialogs.forEach(function (el) {
+  el.addEventListener("click", ({target:dialog}) => {
+    if (dialog.nodeName === 'DIALOG') {
+      dialog.close('dismiss')
+      // window.onscroll = function(){}; 
+    }
+  });
+});
+

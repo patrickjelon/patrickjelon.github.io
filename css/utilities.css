@@ -1,128 +1,55 @@
 /*============= ROOT =============*/ 
 :root {
-  --primary-color: #ffbd59;
-  --dark-color: #2b2b2b;
-  --light-color: #f6f6f6;
+  --primary-color: #778241;
+  --secondary-color: #F5DDCB;
+  --light-color: #f4f4f4;
+  --dark-color: #333;
 
-  --font-montserrat-light: 'Montserrat Light', serif;
-  --font-montserrat-reg: 'Montserrat Regular', serif;
-  --font-montserrat-bold: 'Montserrat Bold', serif;
+  --font-catamaran-light: 'Catamaran Light', sans-serif;
+  --font-catamaran-reg: 'Catamaran Regular', serif;
+  --font-catamaran-bold: 'Catamaran Bold', sans-serif;
 }
 
-
 @font-face {
-  font-family: 'Montserrat Light';
+  font-family: 'Catamaran Light';
   font-style: normal;
   font-weight: 300;
-  src: url('../fonts/Montserrat/Montserrat-Light.woff2') format('woff2');
+  src: url('../fonts/Catamaran/Catamaran-Light.woff2') format('woff2');
 }
 
 @font-face {
-  font-family: 'Montserrat Regular';
+  font-family: 'Catamaran Regular';
   font-style: normal;
   font-weight: 400;
-  src: url('../fonts/Montserrat/Montserrat-Regular.woff2') format('woff2');
+  src: url('../fonts/Catamaran/Catamaran-Reg.woff2') format('woff2');
 }
 
 @font-face {
-  font-family: 'Montserrat Bold';
+  font-family: 'Catamaran Bold';
   font-style: normal;
   font-weight: 600;
-  src: url('../fonts/Montserrat/Montserrat-SemiBold.woff2') format('woff2');
+  src: url('../fonts/Catamaran/Catamaran-Bold.woff2') format('woff2');
 }
-
-/*============= Start General Utilities =============*/
-
-ul,
-li {
-  list-style: none;
-}
-
-.text-primary {
-  color: var(--primary-color) !important;
-}
-
-.text-dark {
-  color: var(--dark-color) !important;
-}
-
-.text-light {
-  color: var(--light-color) !important;
-}
-
-.ie-warning {
-  display: none;
-  width: 100%;
-  height: 100vh;
-  background: #fff;
-}
-
-.ie-warning h1 {
-  margin-top: 20vh;
-}
-
-input:-webkit-autofill,
-input:-webkit-autofill:hover, 
-input:-webkit-autofill:focus, 
-input:-webkit-autofill:active{
-    box-shadow: 0 0 0 30px white inset !important; /* -webkit-box-shadow */
-}
-
-/*-- Start Buttons --*/
-button:focus,
-a:focus {
-  outline: 0;
-  box-shadow: none;
-  -webkit-appearance: none;
-}
-
-.pt-3 {
-  padding-top: 28px;  
-}
-
-a, 
-a:hover {
-  text-decoration: none;
-}
-
-.btn-theme {
-  background: 0 0;
-  color: var(--dark-color);
-  font-size: 12px;
-  padding: 10px 26px;
-  box-shadow: 2px 2px 0 var(--dark-color);
-  display: inline-block;
-  border: 1px solid var(--dark-color);
-  border-radius: 0;
-  text-transform: uppercase;
-  width: auto;
-}
-
-.btn-theme:hover {
-  background: #232323;
-  color: #fff;
-  border-color: transparent;
-  box-shadow: 0 0 0 transparent;
-}
-
-/*-- End Buttons --*/ 
-/*============= End General Utilities =============*/
 
 /*============= START PRELOADER =============*/ 
 .pre-loader {
   position: fixed;
   overflow: hidden;
-  background: #111;
-  height: 110%;
-  width: 110%;
+  background: var(--dark-color);
+  height: 100%;
+  width: 100%;
   z-index: 3000;
   transition: all 0.85s ease;
 }
 
+.mb-10 {
+  margin-bottom: 10px;
+}
+
 .loader-inner {
   position: absolute;
-  left: 50vw;
-  top: 50vh;
+  left: 50%;
+  top: 50%;
   transform: translate(-50%, -50%);
 }
 
@@ -140,11 +67,6 @@ a:hover {
 .pre-loader.loaded {
   opacity: 0;
   z-index: 0 !important;
-}
-
-html.html-loaded {
-  overflow-y: overlay !important;
-  overflow-y: visible;
 }
 
 @keyframes animloader44 {
@@ -170,6 +92,95 @@ html.html-loaded {
 }
 /*============= END PRELOADER =============*/
 
+.btn-container {
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.btn-theme {
+  color: var(--primary-color);
+	 cursor: pointer;
+	 font-size: 18px;
+	 font-weight: 600;
+	 line-height: 45px;
+	 margin: 0 0 2em;
+	 /* max-width: 160px; */
+   padding: 0 30px;
+   border: 3px solid;
+   display: block;
+	 overflow: hidden;
+	 position: relative;
+	 text-decoration: none;
+	 text-transform: uppercase;
+	 /* width: 100%; */
+}
+
+.btn-theme span {
+  z-index: 50;
+}
+
+.btn-theme::after {
+  background: var(--primary-color);
+	 content: "";
+	 height: 155px;
+	 left: -75px;
+	 opacity: 0.7;
+	 position: absolute;
+	 top: -50px;
+	 transform: rotate(35deg);
+	 transition: all 850ms cubic-bezier(0.19, 1, 0.22, 1);
+	 width: 50px;
+	 z-index: 0;
+}
+
+.btn-theme:hover:after {
+  left: 120%;
+	 transition: all 850ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.btn-theme:active {
+  background: var(--primary-color);
+  color: var(--light-color);
+  border-color: var(--primary-color);
+}
+
+footer .btn-theme {
+  color: var(--secondary-color);
+}
+
+footer .btn-theme::after {
+  background: var(--secondary-color);
+}
+
+footer .btn-theme:active {
+  background: var(--secondary-color);
+  border-color: var(--secondary-color);
+  color: var(--dark-color);
+}
+
+.p-relative {
+  position: relative;
+}
+
+
+.btn-booking {
+  background: none;
+  cursor: pointer;
+}
+
+.btn-booking span {
+  font-family: var(--font-catamaran-reg);
+  font-weight: 600;
+}
+
+.btn-unset {
+  all: unset;
+  cursor: pointer;
+}
+
 /*============= START BLOCK REVEAL ANIMATIONS =============*/ 
 .reveal-lr,
 .reveal-rl,
@@ -177,17 +188,6 @@ html.html-loaded {
 .reveal-bt {
   position: relative;
   overflow: hidden;
-}
-
-.span-animation[data-aos="span-left"].aos-animate,
-.span-animation[data-aos="span-right"].aos-animate,
-.span-animation[data-aos="span-top"].aos-animate {
-  transform: translate(0, 0);
-  opacity: 1;
-}
-
-.pricing-table-animation[data-aos="pricing-table"].aos-animate {
-  transform: translateX(0);
 }
 
 .reveal-lr[data-aos=block-reveal].aos-animate > *,
@@ -215,7 +215,7 @@ html.html-loaded {
 	top: 0;
 	width: 100%;
 	height: 100%;
-	background: var(--primary-color);
+	background: var(--dark-color);
 }
 
 .reveal-lr[data-aos=block-reveal].aos-animate::after {
@@ -344,11 +344,77 @@ html.html-loaded {
 }
 */
 
+.border-none {
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+  border-bottom: none !important;
+}
+
+.polaris-heading {
+  margin-bottom: 3.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.polaris-heading h1 {
+  position: relative;
+  display: inline-block;
+    font-family: var(--font-catamaran-bold);
+    color: var(--primary-color);
+    -webkit-transition: all 0.4s ease 0s;
+    -o-transition: all 0.4s ease 0s;
+    transition: all 0.4s ease 0s;
+
+  font-size:36px; 
+  font-weight:700;  
+  letter-spacing:1px; 
+  text-transform:uppercase; 
+  /* width:160px;  */
+  text-align:center; 
+  margin:auto; 
+  /* white-space:nowrap;  */
+  padding-bottom:13px;
+}
+
+.polaris-heading h1::before {
+  background-color: var(--primary-color);
+    border-radius: 0.25rem;
+    content: '';
+    display: block;
+    height: 0.25rem;
+    width: 60px;
+    margin-bottom: 0.25rem;
+}
+/* 
+.polaris-heading h1:before {
+    background-color: var(--primary-color);
+    content: '';
+    display: block;
+    height: 3px;
+    width: 75px;
+    margin-bottom: 5px;
+}
+.polaris-heading h1:after {
+    background-color: var(--primary-color);
+    content: '';
+    display: block;
+  position:absolute; 
+  right:0; 
+  bottom:0;
+    height: 3px;
+    width: 75px;
+    margin-bottom: 0.25em;
+} */
+
+
 /*============= Start Framework =============*/
 .container {
-	max-width: 1183px;
-	padding: 0 40px;
-	margin: 0 auto;
+	max-width: 1310px;
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
 }
 
 .container-fluid {
@@ -359,40 +425,28 @@ html.html-loaded {
 	margin-left: auto;
 }
 
-.p-fixed {
-  position: fixed;
+.navbar {
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0.5rem 1rem;
 }
 
-.p-relative {
-  position: relative;
+.navbar-expand {
+	flex-flow: row nowrap;
+	justify-content: flex-start;
 }
 
-.p-absolute {
-  position: absolute;
-}
-
-.overflow-hidden {
-  overflow: hidden;
-}
-
-.cursor-default {
-  cursor: default;
-}
-
-.overflow-hidden-x {
-  overflow-x: hidden;
-}
-
-.overflow-hidden-y {
-  overflow-y: hidden;
-}
-
-.w-100 {
-  width: 100%;
-}
-
-.maxw-100 {
-  max-width: 100%;
+.navbar-brand {
+	display: inline-block;
+	padding-top: 0.3125rem;
+	padding-bottom: 0.3125rem;
+	margin-right: 1rem;
+	font-size: 1.25rem;
+	line-height: inherit;
+	white-space: nowrap;
 }
 
 /*-- Start Spacing --*/	
@@ -419,14 +473,6 @@ html.html-loaded {
 .d-block {
 	display: block;
 }
-
-.d-inline-block {
-  display: inline-block;
-}
-
-.d-inline {
-  display: inline;
-}
 /*-- End Spacing --*/
 
 /* Start Text */
@@ -446,15 +492,22 @@ html.html-loaded {
   text-transform: uppercase;
 }
 
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  margin-bottom: .5rem;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.2;
+  color: inherit;
+}
+
+.h1, h1 {
+  font-size: 2.5rem;
+}
 /* End Text */
 
 /*-- Start Colors --*/
 .bg-dark {
-	background-color: var(--dark-color) !important;
-}
-
-.bg-green-contrast {
-  background-color: rgba(0, 92, 88, 0.2) !important;
+	background-color: var(--dark-color);
 }
 
 .text-white {
@@ -493,10 +546,6 @@ html.html-loaded {
 
 .align-items-end {
 	align-items: flex-end;
-}
-
-.flex-row {
-  flex-flow: row;
 }
 
 .flex-1 {
@@ -944,3 +993,103 @@ html.html-loaded {
 }
 /*-- End Grid System --*/
 /*============= End Framework =============*/
+
+/*============= Start General Utilities =============*/
+/*-- Start Buttons --*/
+button:focus,
+a:focus,
+a.btn:focus {
+  outline: 0;
+  -webkit-appearance: none;
+  box-shadow: none;
+}
+
+button,
+a,
+a.btn {
+  transition: all 0.6s ease;
+}
+
+a, a:hover {
+  text-decoration: none;
+}
+/*-- End Buttons --*/
+
+.list-inline {
+  padding-left: 0;
+  list-style: none;
+}
+
+dl, ol, ul {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+/*============= End General Utilities =============*/
+
+/* Styling the modal and backdrop */
+
+dialog {
+  width: 100%;
+  max-width: 50%;
+  padding: 0;
+  background: #fff;
+  overflow: hidden;
+  border-radius: 8px;
+  border: 1px solid #dedede;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  margin: auto;
+  animation: scale-in 0.4s ease-out;
+}
+
+dialog::backdrop {
+  background: radial-gradient(circle,rgba(0, 0, 0, 0.5) 0%,rgba(0, 0, 0, 0.7) 100%);
+  cursor: pointer;
+}
+
+/* Styling inside of the modal */
+
+dialog header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background: #fff;
+}
+
+dialog header button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 16px;
+  padding-bottom: 0;
+  margin-bottom: -10px;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+dialog header button svg {
+  width: 35px;
+  height: 35px;
+  fill: #607d8b;
+}
+
+.square-booking-iframe {
+  width: 100%;
+  min-height: 80vh;
+}
+
+@keyframes scale-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-60%);
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+     transform: translateY(0);
+  }
+}
