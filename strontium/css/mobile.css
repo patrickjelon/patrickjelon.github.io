@@ -1,0 +1,437 @@
+/*============= MEDIA QUERIES =============*/
+
+/* Devices over 1200px (xl) */
+@media (min-width: 1200px) {
+
+}
+
+/* Devices under 1200px (lg) */
+@media (max-width: 1199.98px) {
+  .post-caption {
+    order: 1;
+  }
+
+  .post-caption-title,
+  .post-caption-paragraph,
+  .post-block:nth-child(even) .post-caption-title,
+  .post-block:nth-child(even) .post-caption-paragraph {
+    text-align: center;
+  }
+
+  .post-caption-title,
+  .post-block:nth-child(even) .post-caption-title {
+    margin: 0;
+    margin-bottom: 0.75rem;
+  }
+
+  .testimonial-content {
+    max-width: 85%;
+  }
+
+  .gallery-inner .gallery-item-text {
+    padding: 0 30px;
+  }
+
+  .gallery-inner .gallery-item .next-arrow {
+    bottom: -2px;
+  }
+  
+  .gallery-inner .gallery-item .line {
+    bottom: 11px;
+  }
+
+  .external-gallery-wrap {
+    column-count: 3;
+  }
+}
+
+/* Devices under 992px (md) */
+@media (max-width: 991.98px) {
+  .about-image,
+  .about-text {
+    text-align: center;
+  }
+
+  .about-paragraph .btn-theme-padding {
+    margin-top: 0.6rem;
+  }
+
+  .features-list-ul {
+    columns: 2;
+  }
+
+  .gallery-inner .gallery-item.grid-md-6 {
+    flex: 0 0 47%;
+    max-width: 47%;
+  }
+
+  .gallery-inner .gallery-item-text h2 {
+    font-size: 1.75rem;
+  }
+
+  .why-us-landing-text-content {
+    margin: 0 auto;
+    padding-bottom: 20px;
+  }
+
+  .why-us-landing-text-content h2.text-right {
+    text-align: center;
+  }
+
+  .why-us-landing-image.grid-6 {
+    padding-left: 0;
+}
+
+.awards-list .awards-card.grid-md-6 {
+  flex: 0 0 46%;
+  max-width: 46%;
+}
+}
+
+/* Devices under 768px (sm) */
+@media (max-width: 767.98px) {
+  .navbar-center .navbar-brand {
+    white-space: nowrap;
+  }
+
+  .navbar-right {
+    display: none;
+    visibility: hidden;
+  }
+
+  .landing-caption h4 {
+    font-size: 5rem;
+    margin-bottom: -10px;
+  }
+
+  .landing-caption h2 {
+    font-size: 3.25rem;
+  }
+
+  .testimonial h1 {
+    font-size: 2.8rem;
+  }
+
+  .testimonial-content {
+    max-width: 99%;
+  }
+
+  .testimonial-content .quote-background {
+    background-position: 50% -10px;
+  }
+
+  .features-list-ul {
+    columns: 1;
+  }
+
+  .gallery-inner .gallery-item-text h2 {
+    font-size: 1.4rem;
+  }
+
+  .gallery-inner .gallery-item .next-arrow {
+    bottom: -5px;
+  }
+
+  .gallery-inner .gallery-item .line {
+    bottom: 8px;
+  }
+
+  .gallery-overview h1 {
+    font-size: 2.6rem;
+  }
+
+  .external-gallery-wrap {
+    column-count: 2;
+  }
+
+  .awards-list .awards-card.grid-sm-12 {
+    flex: 0 0 82%;
+    max-width: 82%;
+  }
+
+  .external-landing-text h2 {
+    font-size: 4rem;
+  }
+}
+
+/* Devices under 576px (xs) */
+@media (max-width: 576.98px) {
+  .navbar {
+    padding: 0.7rem 0;
+  }
+
+  .navbar-ul,
+  .navbar-brand {
+    margin: 0;
+  }
+
+  .navbar-brand {
+    padding-right: 7px;
+  }
+
+  .navbar .container-fluid {
+    padding: 0;
+  }
+
+  .menu-wrap .menu-image {
+    display: none;
+    visibility: hidden;
+  }
+
+  .landing-caption h4 {
+    font-size: 4rem;
+  }
+
+  .landing-caption h2 {
+    font-size: 2.75rem;
+  }
+
+  #intro .intro-paragraph {
+    max-width: 90%;
+  }
+
+  .highlights {
+    padding: 0 35px;
+  }
+
+  .post-caption,
+  .post-image {
+    padding: 0;
+  }
+
+  .post-caption-title h3 {
+    font-size: 1.45rem;
+  }
+
+  .post-caption-paragraph p {
+    font-size: 1.05rem;
+  }
+
+  .about {
+    padding: 6rem 0.5rem;
+  }
+
+  .about-image,
+  .about-text {
+    padding: 0;
+  }
+
+  .about-text h1 {
+    font-size: 2.6rem;
+  }
+
+  .testimonial-content .quote-background {
+    background-size: 200px;
+    background-position: 50% 50%;
+  }
+
+  .gallery-overview h1 {
+    font-size: 2rem;
+  }
+
+  .gallery-inner .gallery-item.grid-xs-12 {
+    flex: 0 0 87%;
+    max-width: 87%;
+  }
+
+  .gallery-inner .gallery-item-text h2 {
+    font-size: 1.75rem;
+  }
+
+  .gallery-inner .gallery-item .next-arrow {
+    bottom: -2px;
+  }
+
+  .gallery-inner .gallery-item .line {
+    bottom: 11px;
+  }
+
+  .external-gallery-wrap {
+    column-count: 1;
+  }
+
+  .why-us-landing-image-quote {
+    font-size: 1.4rem;
+  }
+
+  .why-text h1 {
+    font-size: 2.75rem;
+  }
+
+  .process-step > div {
+    margin-bottom: 50px;
+  }
+
+  .external-landing-text h2 {
+  font-size: 2.75rem;
+  }
+
+  .contact-inner {
+    width: 93%;
+  }
+}
+
+@media (max-width: 381.98px) {
+  .navbar-brand {
+    font-size: 1.25rem;
+  }
+
+  .navbar-brand span {
+    display: none;
+    visibility: hidden;
+  }
+
+  .menu-wrap .menu-navigation .navbar-main.navbar-ul {
+    font-size: 1.65rem;
+  }
+
+  .menu-wrap .menu-navigation .navbar-main .nav-item {
+    white-space: normal;
+  }
+
+  .menu-wrap .menu-navigation .navbar-contact-info h5 {
+    white-space: normal;
+    font-size: 1rem;
+  }
+
+  .menu-wrap .menu-navigation .navbar-contact-info p {
+    font-size: 0.95rem;
+  }
+
+  .landing-caption {
+    padding: 0 0.5rem;
+  }
+
+  .landing-caption h4 {
+    font-size: 3.25rem;
+  }
+
+  .landing-caption h2 {
+    font-size: 2.25rem;
+  }
+
+  #intro h1 {
+    font-size: 2.2rem;
+  }
+
+  #intro .intro-paragraph {
+    font-size: 0.95rem;
+    max-width: 100%;
+  }
+
+  .highlights {
+    padding: 0 14px;
+  }
+
+  .testimonial h1 {
+    font-size: 2.45rem;
+  }
+
+  .testimonial-content {
+    max-width: 100%;
+  }
+
+  .gallery-inner .gallery-item.grid-xs-12 {
+    flex: 0 0 79%;
+    max-width: 79%;
+  }
+
+  .gallery-inner .gallery-item-text {
+    padding: 0 15px;
+}
+
+  .gallery-inner .gallery-item-text h2 {
+    font-size: 1.4rem;
+  }
+
+  .gallery-inner .gallery-item .next-arrow {
+    bottom: -5px;
+  }
+
+  .gallery-inner .gallery-item .line {
+    bottom: 8px;
+  }
+
+  .gallery-inner div.text-center {
+    max-width: 95%;
+  }
+
+  .gallery-inner div.text-center h1 {
+    font-size: 2.45rem;
+  }
+
+  .external-gallery h1 {
+    font-size: 2.45rem;
+  }
+
+  .why-us-landing-text-content {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .why-us-landing-text-content h2 {
+    font-size: 1.95rem;
+  }
+
+  .why-us-landing-image-quote {
+    font-size: 1.2rem;
+  }
+
+  .why-text > div {
+    max-width: 90%;
+  }
+
+  .awards-list .awards-card.grid-sm-12 {
+    flex: 0 0 90%;
+    max-width: 90%;
+  }
+
+  .awards-card-front-text h3 {
+    font-size: 1.85rem;
+  }
+
+  .external-landing-inner {
+    padding: 0 6px;
+  }
+
+  .external-landing-text h2 {
+    font-size: 2rem;
+  }
+
+  .contact-heading h3 {
+    font-size: 1.85rem;
+  }
+
+  .contact-heading small {
+    font-size: 0.95rem;
+  }
+
+  .form-input-6,
+  .form-input-6.left,
+  .form-input-6.right {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .form-input-12 p {
+    text-align: center;
+  }
+}
+
+/*============ FRAMEWORK BREAK POINTS: =============*/
+
+/* Extra small (xs) devices (portrait phones, less than 576px)
+No media query since this is the default in Framework
+
+Small (sm) devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+Medium (md) devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+Large (lg) devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+Extra (xl) large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... } */

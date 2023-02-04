@@ -1,7 +1,7 @@
 ! function() {
   var e, t, o, n, r = {
           frameRate: 150,
-          animationTime: 400,
+          animationTime: 700,
           stepSize: 100,
           pulseAlgorithm: !0,
           pulseScale: 4,

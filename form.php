@@ -2,11 +2,10 @@
 
 if(isset($_POST['email'])) {
   //Email information
-  $admin_email = "info@polarisdetailing.ca";
-  $name = $_POST['fullname'];
-  $email = $_POST['e-mail'];
-  $phone = $_POST['phone'];
-  $company = $_POST['company'];
+  $admin_email = "info@oriplex.com";
+  $name = $_POST['name'];
+  $email = $_POST['email'];
+  $phone = $_POST['tel'];
   $message = $_POST['message'];
   
   $body = "";
@@ -14,14 +13,13 @@ if(isset($_POST['email'])) {
   $body .= "From: ".$name. "\r\n";
   $body .= "Email: ".$email. "\r\n";
   $body .= "Phone: ".$phone. "\r\n";
-  $body .= "Company: ".$company. "\r\n";
   $body .= "\r\n";
   $body .= "Message: \r\n".$message. "\r\n";
   
-  $headers = "From: Polaris Website ".$email;
+  $headers = "From: Oriplex ".$email;
 
   //send email
 
   mail($admin_email, "New Form Submission", $body, $headers);
-  header('Location: https://polarisdetailing.ca/confirm-submission');
+  header('Location: https://oriplex.com/confirm-submission');
 }
