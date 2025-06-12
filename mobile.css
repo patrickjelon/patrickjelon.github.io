@@ -14,6 +14,14 @@
   body p {
     max-width: 100%;
   }
+
+  .mobile-warning {
+    display: block;
+    visibility: visible;
+    font-size: 48px;
+    font-family: 'Exo 2', sans-serif;
+    text-align: center;
+  }
 }
 
 @media(max-width: 575px) {
