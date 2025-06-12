@@ -1,428 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Language" content="en">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<head>  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <meta name="description" content="Oriplex roofing services website template.">
-  <meta name="keywords" content="oriplex, web development template, bootstrap, roofing, roofing service, this, does, not, matter">
-  <meta name="author" content="Oriplex Intl. @ oriplex.com">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://oriplex.com/"> <!-- main domain link e.g https://oriplex.com/ or just www.oriplex.com/ ?-->
-  <!-- link your xml sitemap on this line, use a resource such as xml-sitemaps.com -->
-
-  <!-- Website Recognition meta Tags -->
-
-  <meta property="og:locale" content="en_CA">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="http://www.oriplex.com">
-  <meta property="og:title" content="Should be what the title in head is">
-  <meta property="og:description" content="A sentence or two about what the company / website does or is about.">
-	<meta property="og:image" content=""> <!-- 2:1 aspect ratio, min 300x157 max 4096x4096 <5MB size -->
-	<meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Should be what the title in head is">
-  <meta name="twitter:description" content="A sentence or two about what the company / website does or is about.">
-  <meta name="twitter:image" content=""> <!-- 2:1 aspect ratio, min 300x157 max 4096x4096 <5MB size -->
-  <meta name="twitter:image:alt" content="A brief description of the image for the visually impaired. Max length 400 characters.">
-
-  <link rel="shortcut icon" href="img/">
-  <title>Dare Roofing | Home</title>
-
-  <link rel="stylesheet" href="css/utilities.css">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/mobile.css">
-
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> <!-- Animate On Scroll -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" /> <!-- owl carousel css -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" /> <!-- owl carousel theme css -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Roboto:wght@500&display=swap" rel="stylesheet"> <!-- Lato 300, 400 | Roboto 500 -->
-
-  <link href="https://cdn.lineicons.com/3.0/lineicons.css" rel="stylesheet">
-
-  <style> 
-  /* BATTLEFIELD CSS, DELETE WHEN FINISHING SECTION */
-    .test {
-      margin-bottom: 100px;
-      padding-bottom: 400px;
-    }
-  </style>
+  <title>Football Route Drawer | Patrick Jelon</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script> <!-- save as png functionality -->
 </head>
 <body>
-  <!-- START PRELOADER -->
-  <div class="pre-loader">
-    <div class="loader-inner">
-      <span class="loader"></span>
-    </div>
+  <h1>Simple Football Route Drawer</h1>        
+  <div class="controls">
+    <button onclick="addPlayer('quarterback')" class="add-qb">ADD QUARTERBACK</button>
+    <button onclick="addPlayer('receiver')" class="add-receiver">ADD RECEIVER</button>
+  </div>  
+  <div class="field-container">     
+    <!-- 10 yard endzone - no markers -->
+    <div style="height: 266px;"></div>
+    <div class="endzone-plug">patrickjelon.github.io</div>
+    <!-- 0 yard line -->
+    <div class="yard-line" style="top: 266px;"></div>
+    <!-- 0-5 yards hash marks -->
+    <div class="hash-mark left" style="top: 292.6px;"></div>  <!-- 1 yard -->
+    <div class="hash-mark right" style="top: 292.6px;"></div>
+    <div class="hash-mark left" style="top: 319.2px;"></div>  <!-- 2 yards -->
+    <div class="hash-mark right" style="top: 319.2px;"></div>
+    <div class="hash-mark left" style="top: 345.8px;"></div>  <!-- 3 yards -->
+    <div class="hash-mark right" style="top: 345.8px;"></div>
+    <div class="hash-mark left" style="top: 372.4px;"></div>  <!-- 4 yards -->
+    <div class="hash-mark right" style="top: 372.4px;"></div>
+    <!-- 5 yard line -->
+    <div class="yard-line" style="top: 399px;"></div>
+    <!-- 6-10 yards hash marks -->
+    <div class="hash-mark left" style="top: 425.6px;"></div>  <!-- 6 yards -->
+    <div class="hash-mark right" style="top: 425.6px;"></div>
+    <div class="hash-mark left" style="top: 452.2px;"></div>  <!-- 7 yards -->
+    <div class="hash-mark right" style="top: 452.2px;"></div>
+    <div class="hash-mark left" style="top: 478.8px;"></div>  <!-- 8 yards -->
+    <div class="hash-mark right" style="top: 478.8px;"></div>
+    <div class="hash-mark left" style="top: 505.4px;"></div>  <!-- 9 yards -->
+    <div class="hash-mark right" style="top: 505.4px;"></div> 
+    <!-- 10 yard line -->
+    <div class="yard-line" style="top: 532px;"><div class="yard-number ten-num">10</div></div>
+    <!-- 11-15 yards hash marks -->
+    <div class="hash-mark left" style="top: 558.6px;"></div>  <!-- 11 yards -->
+    <div class="hash-mark right" style="top: 558.6px;"></div>
+    <div class="hash-mark left" style="top: 585.2px;"></div>  <!-- 12 yards -->
+    <div class="hash-mark right" style="top: 585.2px;"></div>
+    <div class="hash-mark left" style="top: 611.8px;"></div>  <!-- 13 yards -->
+    <div class="hash-mark right" style="top: 611.8px;"></div>
+    <div class="hash-mark left" style="top: 638.4px;"></div>  <!-- 14 yards -->
+    <div class="hash-mark right" style="top: 638.4px;"></div>
+    <!-- 15 yard line -->
+    <div class="yard-line" style="top: 665px;"></div>
+    <!-- 16-20 yards hash marks -->
+    <div class="hash-mark left" style="top: 691.6px;"></div>  <!-- 16 yards -->
+    <div class="hash-mark right" style="top: 691.6px;"></div>
+    <div class="hash-mark left" style="top: 718.2px;"></div>  <!-- 17 yards -->
+    <div class="hash-mark right" style="top: 718.2px;"></div>
+    <div class="hash-mark left" style="top: 744.8px;"></div>  <!-- 18 yards -->
+    <div class="hash-mark right" style="top: 744.8px;"></div>
+    <div class="hash-mark left" style="top: 771.4px;"></div>  <!-- 19 yards -->
+    <div class="hash-mark right" style="top: 771.4px;"></div>
+    <!-- 20 yard line -->
+    <div class="yard-line" style="top: 798px;"><div class="yard-number">20</div></div>
+    <!-- 21-25 yards hash marks -->
+    <div class="hash-mark left" style="top: 824.6px;"></div>  <!-- 21 yards -->
+    <div class="hash-mark right" style="top: 824.6px;"></div>
+    <div class="hash-mark left" style="top: 851.2px;"></div>  <!-- 22 yards -->
+    <div class="hash-mark right" style="top: 851.2px;"></div>
+    <div class="hash-mark left" style="top: 877.8px;"></div>  <!-- 23 yards -->
+    <div class="hash-mark right" style="top: 877.8px;"></div>
+    <div class="hash-mark left" style="top: 904.4px;"></div>  <!-- 24 yards -->
+    <div class="hash-mark right" style="top: 904.4px;"></div>
+    <!-- 25 yard line -->
+    <div class="yard-line" style="top: 931px;"></div>
+    <!-- 26-30 yards hash marks -->
+    <div class="hash-mark left" style="top: 957.6px;"></div>  <!-- 26 yards -->
+    <div class="hash-mark right" style="top: 957.6px;"></div>
+    <div class="hash-mark left" style="top: 984.2px;"></div>  <!-- 27 yards -->
+    <div class="hash-mark right" style="top: 984.2px;"></div>
+    <div class="hash-mark left" style="top: 1010.8px;"></div>  <!-- 28 yards -->
+    <div class="hash-mark right" style="top: 1010.8px;"></div>
+    <div class="hash-mark left" style="top: 1037.4px;"></div>  <!-- 29 yards -->
+    <div class="hash-mark right" style="top: 1037.4px;"></div>
+    <!-- 30 yard line -->
+    <div class="yard-line" style="top: 1064px;"><div class="yard-number">30</div></div>
+    <!-- Final 31-35 yards hash marks -->
+    <div class="hash-mark left" style="top: 1090.6px;"></div>  <!-- 31 yards -->
+    <div class="hash-mark right" style="top: 1090.6px;"></div>
+    <div class="hash-mark left" style="top: 1117.2px;"></div>  <!-- 32 yards -->
+    <div class="hash-mark right" style="top: 1117.2px;"></div>
+    <div class="hash-mark left" style="top: 1143.8px;"></div>  <!-- 33 yards -->
+    <div class="hash-mark right" style="top: 1143.8px;"></div>
+    <div class="hash-mark left" style="top: 1170.4px;"></div>  <!-- 34 yards -->
+    <div class="hash-mark right" style="top: 1170.4px;"></div>
+  </div> 
+  <div class="drawing-controls">
+    <button class="confirm" onclick="finishRoute()">✓</button>
+    <button class="cancel" onclick="cancelRoute()">×</button>
+    <button class="undo" onclick="undoRoute()">U</button>
+  </div>  
+  <div class="instructions">
+    <p>Instructions</p>
+    <ul>
+      <li>Click "Add Quarterback" to add a quarterback.</li>
+      <li>Click "Add Receiver" to add receivers.</li>
+      <li>Click and drag players to move them around the field.</li>
+      <li>Click a player to draw a straight route, curve route, name them, or remove them.</li>
+      <li>Click ✓ to finish or × to cancel the route. U to undo last action.</li>
+      <li>To save your route as a PNG image, click the 'Save as PNG' button at the bottom of the screen.</li>
+    </ul>
   </div>
-  <!-- END PRELOADER -->
-  <!-- Start Navigation -->
-  <nav class="navbar">
-    <div class="container-fluid">
-      <a href="index.html" class="navbar-brand"><img src="img/dare-logo.webp" alt=""><h1>Dare</h1></a>
-      <input type="checkbox" class="mobile-toggler-checkbox">
-      <i class="mobile-toggler-icon"></i>
-      <div class="mobile-container">
-        <ul class="navbar-ul m-auto">
-          <li class="nav-item"><a href="pages/why-us.html" class="nav-link">Why Us</a></li>
-          <li class="nav-item"><a href="pages/our-work.html" class="nav-link">Our Work</a></li>
-          <li class="nav-item"><a href="pages/partners.html" class="nav-link">Partners</a></li>
-          <li class="nav-item dropdown">
-            <a href="#" class="nav-link">Services<span class="caret"><i class="fas fa-caret-up"></i></span></a>
-            <ul class="dropdown-menu">
-              <li class="nav-item"><a href="pages/services/residential.html" class="nav-link">Residential</a></li>
-              <li class="nav-item"><a href="pages/services/commercial.html" class="nav-link">Commercial</a></li>
-              <li class="nav-item"><a href="pages/services/skylights.html" class="nav-link">Skylights</a></li>
-              <li class="nav-item"><a href="pages/services/inspections.html" class="nav-link">Inspections</a></li>
-              <li class="nav-item"><a href="pages/services/emergency.html" class="nav-link">Emergency</a></li>
-            </ul> <!-- end dropdown item parent ul -->
-          </li> <!-- end dropdown list item -->
-          <li class="nav-item nav-item-mobile"><a href="contact.html" class="nav-link">Contact</a></li>
-        </ul>
-        <ul class="navbar-ul navbar-right ml-auto"> <!-- hide on mobile menu-->
-          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-        </ul>
-      </div> <!-- end mobile container-->
-    </div> <!-- end container fluid -->
-  </nav>
-  <!-- End Navigation -->
-  <!-- Start Landing Page -->
-  <div class="landing-page">
-    <div class="landing-img">
-      <div class="landing-img-wrap">
-        <div class="landing-img-inner"></div>
-      </div>
-    </div> <!-- end landing-img -->
-    <div class="landing-caption">
-      <h1>Dare to Dream with <span>Dare Roofing</span></h1>
-      <hr>
-      <h3>Backed by Leading Industry Professionals & Products</h3>
-      <a href="pages/why-us.html" class="btn-base btn-theme-landing">Why Us?</a>
-      <a href="contact.html" class="btn-base btn-theme-landing">Call Now</a>
-    </div> <!-- end landing-caption -->
-    <div class="landing-divider">
-      <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-          <path d="M1200 0L0 0 892.25 114.72 1200 0z" class="landing-divider-fill"></path>
-      </svg>
-    </div>
+  <div class="save-controls">
+    <button onclick="saveAsImage()" class="save-button">Save as PNG</button>
   </div>
-  <!-- End Landing Page -->
-  <!-- Start About Section -->
-  <div class="master-container about">
-    <div class="about-content ac-60">
-      <div class="theme-heading" data-aos="fade-up" data-aos-once="true" data-aos-enable="true" data-aos-duration="700">
-        <h1>Local Area Roofing Experts</h1>
-        <h3>Dare Roofing works in the local area, ran by award winning roofing contractors with over 25 years of experience. We pride ourselves as the best roofers that our area has to offer.</h3>
-      </div>
-      <div class="about-content-paragraph" data-aos="fade-up" data-aos-once="true" data-aos-enable="true" data-aos-duration="700" data-aos-delay="700">
-        <p>Whether you need emergency roofing repairs, skylight installations, commerical or residential roofing, we have your backs. Dare to dream with Dare Roofing, as we put our best contractors and personal efforts to satisfying your roofing needs.</p>
-        <p>We offer affordable financing as well, and comprehensive inspections to ensure your roof complies with local regulations. We experly deal with a variety of situations, including roofing replacements, construction and repairs.</p>
-      </div>
-    </div>
-    <div class="about-content ac-40">
-      <div class="about-content-box">
-        <div class="about-content-box-heading">
-          <i class="lni lni-warning"></i>
-          <h3>Operations during COVID-19</h3>
-        </div>
-        <div class="about-content-box-paragraph">
-          <p>The health and safety of our customers and employees is of paramount importance to us.</p>
-          <p>For that reason Dare Roofing is implementing steps to continue doing business in a safe manner while handling communications with clients by phone or by email.</p>
-          <p>We are now able to carry out work again following the guidelines set out by the provincial government, so please feel free to contact us for your roofing needs by clicking on the Contact Us button and someone will be happy to assist you.</p>
-          <p>On behalf of Dare Roofing, stay safe during these troubling times.</p>
-          <small>Last Updated 03/07/2021</small>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- End About Section -->
-  <!-- Start Specialty Services Section -->
-  <div class="master-container specialty">
-    <div class="specialty-heading">
-      <h1 class="theme-h1 gsap-animate" data-aos="fade-up" data-aos-once="true" data-aos-enable="true" data-aos-duration="700">Our Specialized Services</h1>
-      <h3 class="gsap-animate" data-aos="fade-up" data-aos-once="true" data-aos-enable="true" data-aos-duration="700" data-aos-delay="700">Dare Roofing provides a range of services for roofing including but not limited to roofing repair, inspection, emergency repairs and more. We also acknowledge many of our clients may have very specific and less covered issues and we do our best to accomodate for those clients. Some of our more specialized services can be found below.</h3>
-    </div>
-    <div class="specialty-services">
-      <div class="specialty-services-box gsap-animate" data-aos="fade-up" data-aos-once="true" data-aos-enable="true" data-aos-duration="300" data-aos-delay="700">
-        <a href="pages/services/vents.html" class="specialty-services-box-link">
-          <div class="specialty-services-box-inner">
-            <img src="img/home/services-vent.jpg" alt="">
-            <h3>Roof Vent Replacement</h3>
-          </div>
-        </a>
-      </div>
-      <div class="specialty-services-box gsap-animate" data-aos="fade-up" data-aos-once="true" data-aos-enable="true" data-aos-duration="800" data-aos-delay="1000">
-        <a href="pages/services/residential.html" class="specialty-services-box-link">
-          <div class="specialty-services-box-inner">
-            <img src="img/home/services-flat.jpg" alt="">
-            <h3>Flat Roof Repair</h3>
-          </div>
-        </a>
-      </div>
-      <div class="specialty-services-box gsap-animate" data-aos="fade-up" data-aos-once="true" data-aos-enable="true" data-aos-duration="800" data-aos-delay="1200">
-        <a href="pages/services/sidings.html" class="specialty-services-box-link">
-          <div class="specialty-services-box-inner">
-            <img src="img/home/services-gutter.jpg" alt="">
-            <h3>Gutter Installation & Maintanence</h3>
-          </div>
-        </a>
-      </div>
-      <div class="specialty-services-box gsap-animate" data-aos="fade-up" data-aos-once="true" data-aos-enable="true" data-aos-duration="800" data-aos-delay="1500">
-        <a href="pages/services/residential.html" class="specialty-services-box-link">
-          <div class="specialty-services-box-inner">
-            <img src="img/home/services-shingles.jpg" alt="">
-            <h3>Shingles Replacement</h3>
-          </div>
-        </a>
-      </div>
-      <div class="specialty-services-box gsap-animate" data-aos="fade-up" data-aos-once="true" data-aos-enable="true" data-aos-duration="800" data-aos-delay="1800">
-        <a href="pages/services/skylights.html" class="specialty-services-box-link">
-          <div class="specialty-services-box-inner">
-            <img src="img/home/services-skylight.jpg" alt="">
-            <h3>Skylights</h3>
-          </div>
-        </a>
-      </div>
-      <div class="specialty-services-box gsap-animate" data-aos="fade-up" data-aos-once="true" data-aos-enable="true" data-aos-duration="800" data-aos-delay="2100">
-        <a href="pages/services/inspections.html" class="specialty-services-box-link">
-          <div class="specialty-services-box-inner">
-            <img src="img/home/services-inspection.jpg" alt="">
-            <h3>Roof Inspections</h3>
-          </div>
-        </a>
-      </div>
-    </div> <!-- end specialty-services container -->
-  </div>
-  <!-- End Specialty Services Section -->
-  <!-- Start Features Banner Section -->
-  <div class="features-banner">
-    <div class="features-divider">
-      <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-          <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="features-divider-fill"></path>
-      </svg>
-    </div>
-    <div class="master-container features-text-container">
-      <div class="features-text-inner">
-        <h2 class="theme-heading-border gsap-animate" data-aos="fade-up" data-aos-once="true" data-aos-enable="true" data-aos-duration="700">Trusted by most industry professionals</h2>
-        <p class="gsap-animate" data-aos="fade-up" data-aos-once="true" data-aos-enable="true" data-aos-duration="700" data-aos-delay="700">Whether you’re experiencing a roof leak, water damage or your roof shingles are falling off, we are here to provide you guidance for your roofing services. Our team of roofing professionals is experienced with all types of roofing systems. This includes algae-resistant asphalt, architectural shingles, tile, slate, metal, and flat roofs. Our services meet or exceed the Florida Building Code and the tough and stringent requirements to protect homeowners from damage and faulty craftsmanship.</p>
-      </div>
-    </div>
-    <div class="features-banner-image">
-      <img src="img/home/features.jpg" alt="">
-    </div>
-  </div>
-  <!-- End Features Banner Section -->
-  <!-- Start Process Section -->
-  <div class="master-container process">
-    <div class="process-checklist">
-      <div class="checklist-item-outer">
-        <input type="checkbox" class="checklist-button-toggler">
-        <button class="checklist-button">
-          <div class="checklist-button-icon">
-            <i class="fas fa-align-left"></i>
-          </div>
-          <div class="checklist-button-text">
-            <h4>Contact, <span>Step #1</span></h4>
-            <span class="checklist-button-text-x"></span>
-          </div>
-        </button> <!-- end checklist button -->
-        <div class="checklist-item-inner">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In illo asperiores eius architecto reiciendis ipsum. Lorem ipsum dolor sit amet consectetur.</p>
-        </div> <!-- end checklist item inner -->
-      </div> <!-- end checklist item-->
-      <div class="checklist-item-outer">
-        <input type="checkbox" class="checklist-button-toggler">
-        <button class="checklist-button">
-          <div class="checklist-button-icon">
-            <i class="fas fa-home"></i>
-          </div>
-          <div class="checklist-button-text">
-            <h4>Evaluate, <span>Step #2</span></h4>
-            <span class="checklist-button-text-x"></span>
-          </div>
-        </button> <!-- end checklist button -->
-        <div class="checklist-item-inner">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In illo asperiores eius architecto reiciendis ipsum. Lorem ipsum dolor sit amet consectetur.</p>
-        </div> <!-- end checklist item inner -->
-      </div> <!-- end checklist item-->
-      <div class="checklist-item-outer">
-        <input type="checkbox" class="checklist-button-toggler">
-        <button class="checklist-button">
-          <div class="checklist-button-icon">
-            <i class="fas fa-wrench"></i>
-          </div>
-          <div class="checklist-button-text">
-            <h4>Construction, <span>Step #3</span></h4>
-            <span class="checklist-button-text-x"></span>
-          </div>
-        </button> <!-- end checklist button -->
-        <div class="checklist-item-inner">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In illo asperiores eius architecto reiciendis ipsum. Lorem ipsum dolor sit amet consectetur.</p>
-        </div> <!-- end checklist item inner -->
-      </div> <!-- end checklist item-->
-      <div class="checklist-item-outer">
-        <input type="checkbox" class="checklist-button-toggler">
-        <button class="checklist-button">
-          <div class="checklist-button-icon">
-            <i class="fas fa-search"></i>
-          </div>
-          <div class="checklist-button-text">
-            <h4>Inspection, <span>Step #4</span></h4>
-            <span class="checklist-button-text-x"></span>
-          </div>
-        </button> <!-- end checklist button -->
-        <div class="checklist-item-inner inner-modify">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In illo asperiores eius architecto reiciendis ipsum. Lorem ipsum dolor sit amet consectetur.</p>
-        </div> <!-- end checklist item inner -->
-      </div> <!-- end checklist item-->
-    </div>
-    <div class="process-text gsap-animate">
-      <h1 class="theme-heading-border gsap-animate" data-aos="fade-up" data-aos-once="true" data-aos-enable="true" data-aos-duration="700">We undergo a detailed process</h1>
-      <h3 class="gsap-animate" data-aos="fade-up" data-aos-once="true" data-aos-enable="true" data-aos-duration="700" data-aos-delay="700">We ensure the best quality roofing services in all of the local area</h3>
-      <p class="gsap-animate" data-aos="fade-up" data-aos-once="true" data-aos-enable="true" data-aos-duration="700" data-aos-delay="1000">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, esse quisquam? Eos, repellat explicabo dolore perferendis quibusdam modi illum vero, nam nisi architecto nostrum nesciunt sint natus voluptatem quod blanditiis, ut atque dolores. Reiciendis nobis architecto sequi facere hic vero rem dolore minima ex tempore.</p>
-      <p class="gsap-animate" data-aos="fade-up" data-aos-once="true" data-aos-enable="true" data-aos-duration="700" data-aos-delay="1800">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam architecto atque consectetur illum facere explicabo quisquam odio! Velit numquam magni quos officiis, maiores delectus eveniet placeat nobis at eligendi omnis ea unde suscipit voluptatibus sunt repellat nihil dolorum quia illum?</p>
-    </div>
-  </div>
-  <!-- End Process  Section -->
-  <!-- Start Splash Page Section -->
-  <div class="splash">
-    <div class="splash-img">
-      <div class="splash-img-wrap">
-        <div class="splash-img-inner"></div>
-      </div>
-    </div>
-    <div class="splash-caption" data-aos="fade-up" data-aos-once="true" data-aos-enable="true" data-aos-duration="700" data-aos-delay="700">
-      <h1>Top Quality Roofing.</h1>
-      <h3>Dare to leave your roof better than before.</h3>
-      <a href="contact.html" class="btn-base btn-theme-landing">Contact Us</a>
-    </div>
-    <div class="splash-divider-bottom">
-      <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-          <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="splash-divider-bottom-fill"></path>
-      </svg>
-    </div>
-  </div>
-  <!-- End Splash Page Section -->
-  <!-- Start Footer -->
-  <footer class="footer">
-    <div class="footer-container master-container">
-      <div class="footer-column-container">
-        <div class="footer-column contact">
-          <h4 class="footer-column-title">Contact Options</h4>
-          <div class="footer-column-content">
-            <p>205 Main Street</p>
-            <p>Toronto, ON L5D 1O4</p>
-            <br>
-            <p>(416) 416-2550</p>
-            <p>info@dare-roofing.ca</p>
-          </div>
-        </div> <!-- end column -->
-        <div class="footer-column hours">
-          <h4 class="footer-column-title">Contact Hours</h4>
-          <div class="footer-column-content">
-            <p>Mon - Fri: 8am - 4pm</p>
-            <p>Saturday: 10am - 2pm</p>
-          </div>
-        </div> <!-- end column -->
-        <div class="footer-column socials">
-          <h4 class="footer-column-title">Social Media</h4>
-          <div class="footer-column-content footer-column-socials">
-            <a href="#" class="footer-socials"><i class="fab fa-facebook-square"></i></a>
-            <a href="#" class="footer-socials"><i class="fab fa-instagram"></i></a>
-            <a href="#" class="footer-socials"><i class="fab fa-linkedin"></i></a>
-          </div>
-        </div> <!-- end column -->
-        <div class="footer-column site-nav">
-          <h4 class="footer-column-title">Website Navigation</h4>
-          <div class="footer-column-content footer-column-nav">
-            <ul class="footer-ul">
-              <li class="footer-item item-active"><a href="index.html" class="footer-link">Home</a></li>
-              <li class="footer-item"><a href="pages/why-us.html" class="footer-link">Why Us</a></li>
-              <li class="footer-item"><a href="pages/our-work.html" class="footer-link">Our Work</a></li>
-              <li class="footer-item"><a href="pages/partners.html" class="footer-link">Partners</a></li>
-              <li class="footer-item"><a href="pages/services/services.html" class="footer-link">Services</a></li>
-              <li class="footer-item"><a href="contact.html" class="footer-link">Contact</a></li>
-            </ul>
-          </div>
-        </div> <!-- end column -->
-      </div> <!-- end footer column container (inner) -->
-    </div> <!-- end footer container (outer) -->
-    <div class="footer-bottom">
-      <hr>
-      <p class="copyright">Copyright &copy; <span id="year"></span>, All Rights Reserved.</p>
-      <p class="attribution">Designed & Built by <a href="#">Kalaris Digital</a></p>
-      <div class="maple-leaf"><i class="fab fa-canadian-maple-leaf"></i></div>
-    </div>
-  </footer>
-  <!-- End Footer -->
-  <!-- SCRIPT SOURCE FILES -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous"></script> <!-- owl carousel kit -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js" integrity="sha512-cdV6j5t5o24hkSciVrb8Ki6FveC2SgwGfLE31+ZQRHAeSRxYhAQskLkq3dLm8ZcWe1N3vBOEYmmbhzf7NTtFFQ==" crossorigin="anonymous"></script> <!-- GSAP 3 GreenSock -->
-  <script src="js/plugins.js"></script> <!-- main js file -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> <!-- Animate On Scroll -->
-
-  <!-- <script>
-
-    const anim1 = document.querySelector('.specialty-heading');
-    var refreshId = setInterval(function() {
-    if (isInViewport(anim1)) {
-      console.log("hit");
-      gsap.from(".specialty-heading h1", {duration: 0.95, delay: 0.2, ease: "power2.out", y: 145});
-      gsap.to(".specialty-heading h1", {duration: 0.95, delay: 0.2, opacity: "1"});
-      gsap.from(".specialty-heading h3", {duration: 0.95, delay: 0.65, ease: "power2.out", y: 145});
-      gsap.to(".specialty-heading h3", {duration: 0.95, delay: 0.65, opacity: "1"});
-      clearInterval(refreshId);
-      }
-    }, 100);
-
-    const anim2 = document.querySelector('.specialty-services-box');
-    var refreshId2 = setInterval(function() {
-      if (isInViewport(anim2)) {
-      console.log("hit2");
-      gsap.from(".specialty-services-box", {duration: 0.95, delay: 0.2, stagger: 0.25, ease: "power1.out", y: 145});
-      gsap.to(".specialty-services-box", {duration: 0.95, delay: 0.2, stagger: 0.25, opacity: "1"});
-      clearInterval(refreshId2);
-      } 
-    }, 100);
-
-    const anim3 = document.querySelector('.features-text-inner');
-    var refreshId3 = setInterval(function() {
-      if (isInViewport(anim3)) {
-      console.log("hit3");
-      gsap.from(".features-text-inner h2", {duration: 0.95, delay: 0.2, ease: "power1.out", y: 145});
-      gsap.to(".features-text-inner h2", {duration: 0.95, delay: 0.2, opacity: "1"});
-      gsap.from(".features-text-inner p", {duration: 0.95, delay: 0.65, ease: "power1.out", y: 145});
-      gsap.to(".features-text-inner p", {duration: 0.95, delay: 0.65, opacity: "1"});
-      clearInterval(refreshId3);
-      } 
-    }, 100);
-
-    const anim4 = document.querySelector('.process-text');
-    var refreshId4 = setInterval(function() {
-      if (isInViewport(anim4)) {
-      console.log("hit4");
-      gsap.to(".process-text", {duration: 0.95, delay: 0.2, opacity: "1"});
-      gsap.from(".process-text h1", {duration: 0.95, delay: 0.2, ease: "power1.out", y: 145});
-      gsap.to(".process-text h1", {duration: 0.95, delay: 0.2, opacity: "1"});
-      gsap.from(".process-text h3", {duration: 0.95, delay: 0.65, ease: "power1.out", y: 145});
-      gsap.to(".process-text h3", {duration: 0.95, delay: 0.65, opacity: "1"});
-      gsap.from(".process-text p", {duration: 0.95, delay: 1.25, stagger: 0.25, ease: "power1.out", y: 145});
-      gsap.to(".process-text p", {duration: 0.95, delay: 1.25, stagger: 0.25, opacity: "1"});
-      clearInterval(refreshId4);
-      } 
-    }, 100);
-  </script> -->
-    
-  <script>
-    //Get the current year for the copyright
-    var d = new Date();
-    var n = d.getFullYear();
-    document.getElementById("year").innerHTML = n;
-  </script>
+  <p>Plans for the future: mobile responsiveness, route options (straight routes), double click to finish route, hot route / primary route label, defender markers, save routes to local storage</p>
+  <script src="script.js"></script>
 </body>
 </html>
