@@ -32,6 +32,11 @@
     right: 50%;
     transform: translateX(-50%);
   }
+
+  .popup-menu button:nth-of-type(2) {
+    display: none;
+    visibility: hidden;
+  }
 }
 
 @media(max-width: 575px) {
