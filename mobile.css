@@ -11,6 +11,10 @@
     padding: 20px 40px;
   }
 
+  .add-qb {
+    margin-bottom: 15px;
+  }
+
   body p {
     max-width: 100%;
   }
@@ -33,5 +37,20 @@
 @media(max-width: 575px) {
   .field-container {
     max-width: 100%; /* ????? */
+  }
+
+  .endzone-plug {
+    font-size: 35px;
+  }
+}
+
+@media(max-width: 450px) {
+  .add-qb, .add-receiver {
+    font-size: 20px;
+    padding: 10px 20px;
+  }
+
+  .endzone-plug {
+    font-size: 18px;
   }
 }
